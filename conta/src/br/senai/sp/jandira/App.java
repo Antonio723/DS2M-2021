@@ -8,11 +8,11 @@ public class App {
 
 		
 		Conta contaDaAna = new Conta();
-		Conta contaDoJoao = new Conta();
+//		Conta contaDoJoao = new Conta();
 		
 		contaDaAna.titular = "Ana Gomes";
 		contaDaAna.numero = "111-98";
-		contaDaAna.tipo = "Corrente";
+		contaDaAna.setTipo  ("Corrente");
 		contaDaAna.ativa = true;
 		contaDaAna.chequeEspecial = 200;
 		contaDaAna.depositar(100);
@@ -29,17 +29,10 @@ public class App {
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.depositar(100);
 		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
 		
-		int a = somar(10, 5);
-		
-		
-		
-	}
-	
-	public static int somar(int valor1, int valor2) {
-		int resultado = valor1 + valor2;
-		return resultado;
+		double valorSaldo = contaDaAna.getSaldo();
+		System.out.println("************" + valorSaldo);
+		System.out.println(contaDaAna.getTitular());
 	}
 
 }
